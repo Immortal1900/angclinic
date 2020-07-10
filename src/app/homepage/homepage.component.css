@@ -1,0 +1,124 @@
+.back{
+    height: 400px;
+    
+    
+    background: url("https://firebasestorage.googleapis.com/v0/b/sampletvf-8aa59.appspot.com/o/mcdonalds-burger-fries-soda.jpg?alt=media&token=d9abb834-07c5-48b6-b53b-cc897bd7f442") repeat fixed 100%;
+}
+.margin{
+    margin: 75% 0;
+}
+.top1{
+   display: flex;
+    justify-content: space-evenly;
+   margin-right: 3%;
+}
+.logo{
+    height: 70px;
+    width: 400px;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/sampletvf-8aa59.appspot.com/o/asdasdasdasds.JPG?alt=media&token=cd433367-98e1-46d5-89ab-a3423cd9de26") ;
+}
+.marginleft{
+    margin-left: 3%;
+}
+.topbar{
+    display: flex ;
+    justify-content:  flex-start;
+
+}
+.topbarbutton{
+    height: 100%;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.carousal{
+    margin: 0 auto;
+}
+.picsum-img-wrapper{
+height: 400px;}
+
+.kontainer{
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    
+   
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 10;
+    width: 100%;
+  }
+.box{
+ 
+
+    color: white;
+   
+    transition:  all 0.5s ease;
+}
+.box:hover{
+    margin-top: -30px;
+}
+.box2{
+
+    color: white;
+    padding-top: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+}
+.box3{
+
+    color: white;
+    padding-top: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+}
+.box4{
+
+    color: white;
+    padding-top: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+}
+.bottom{
+    height: 400px;
+    width: 100%;
+    background-color: turquoise;
+}
+
+.bottom1{ 
+transition: ease 1s;
+}
+.bottom1 a{
+    color: white;
+}
+.bottom1:hover{
+    margin-top: -1%;
+}
+.col-md-3{
+    display: inline-block;
+    margin-left:-4px;
+  }
+  .col-md-3 img{
+    width:100%;
+    height:auto;
+  }
+  body .carousel-indicators li{
+    background-color:red;
+  }
+  body .carousel-indicators{
+    bottom: 0;
+  }
+  body .carousel-control-prev-icon,
+  body .carousel-control-next-icon{
+    background-color:red;
+  }
+  body .no-padding{
+    padding-left: 0;
+    padding-right: 0;
+     }

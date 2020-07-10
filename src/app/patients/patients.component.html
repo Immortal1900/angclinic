@@ -1,0 +1,48 @@
+<div class="card" style="margin-left: 1%;">
+
+    <div style="display: flex; justify-content: space-between;" > 
+          <h1 style="margin-left: 1%;">APPOINTMENTS</h1>
+   <button mat-mini-fab color="primary" style="margin-right: 1%;">+ADD</button>
+    
+
+</div>
+   <div style="margin-left: 1%; padding-top: 1%;padding-bottom:2% ;" *ngFor="let ace of aces">
+    <div class="card">
+        <div class="row">
+            <h4 class="col-1">Name</h4>
+            <h4 class="col-1">Gender</h4>
+            <h4 class="col-1">Age</h4>
+        </div>
+    </div>
+    <div class="card">
+        <div class="row">
+            <h4 class="col-5">Procedure</h4>
+            <h4 class="col-2">Waiting</h4>
+            <h4 class="col-1">Engaged</h4>
+        </div>
+    </div>
+  <div style="background-color: green;">
+    <div class="card" style="margin-left: 0.5% !important;">
+        <div class="card">
+            <div class="row">
+            <h4 class="col-11">No Procedures planned</h4>
+            <button >
+                <i class="fas fa-pen"></i>
+            </button>
+            </div>
+        </div>
+        <div class="row">
+            <h4 class="col-6">with Dr. ABC </h4>
+            <h4 class="col-1">at 1:00 PM</h4>
+        </div>
+    </div>
+  </div>
+   </div>
+
+
+</div>
+
+
+<h5>NAME</h5>
+<h5>AGE</h5>
+<h5>ID</h5>

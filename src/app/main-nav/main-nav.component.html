@@ -1,0 +1,60 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false" style="background-color: #4a52c2;" >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+       <a mat-list-item href="#" style="color: white;"><i class="fas fa-user-plus"></i></a>
+      <a mat-list-item href="#" style="color: white"><i class="fas fa-calendar-check"></i></a>
+      <a mat-list-item href="#" style="color: white">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon" style="color:#4a52c2 ;">Menu</mat-icon>
+      </button>
+      
+    
+      <form class="form-inline">
+        <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+          aria-label="Search">
+          
+          <a style="padding-left: 10%;" href="#"><i class="fas fa-search" aria-hidden="true" style="color: black;"></i></a> 
+      </form>
+     
+      
+
+
+      <button style="margin-left: 10%;border: 1px solid;" mat-button [matMenuTriggerFor]="menu">Add Patients <a href="#"><i class="fas fa-angle-down"></i></a>
+        
+      </button>
+      
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
+    
+
+<div class="col-7"></div>
+<button mat-mini-fab aria-label="Example icon button with a filter list icon" style="margin-right: 5px; float:right; background-color: white;">
+  <mat-icon><i class="fas fa-clipboard-list"></i></mat-icon>
+</button>
+<button mat-mini-fab  aria-label="Example icon button with a filter list icon" style="margin-right: 5px; float:right; background-color: white;">
+  <mat-icon><i class="fas fa-user-circle"></i></mat-icon>
+</button>
+
+
+
+</mat-toolbar>
+<!-- <app-patients></app-patients> -->
+<app-homepage></app-homepage>
+</mat-sidenav-content>
+
+</mat-sidenav-container>
