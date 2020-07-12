@@ -1,0 +1,37 @@
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:30%;
+    position:relative;
+   
+    border-color: gray;
+    border-width: 5px;
+    border-style: double;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height: 100%;
+    width:100%;
+    position:absolute;
+}
+.titleheading{
+    height: 100px;
+    padding-top: 5%;
+    padding-left: 5%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: cornflowerblue;
+}
+
+.grr{
+    color: grey;
+    padding-top: 3%;
+}
+.sidetitle{
+    font-size: 22px;
+    color: rgb(61, 58, 58);
+    font-weight: lighter;
+    height: 40px;
+    background-color: rgb(219, 196, 105);
+   
+}

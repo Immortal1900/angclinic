@@ -10,7 +10,7 @@ export class HomepageComponent implements OnInit {
   public isMenuCollapsed = true;
   iconlink="https://firebasestorage.googleapis.com/v0/b/sampletvf-8aa59.appspot.com/o/asdasdasdasds.JPG?alt=media&token=cd433367-98e1-46d5-89ab-a3423cd9de26";
   images = ['../../assets/dental1.png','../../assets/dental2.jpeg','../../assets/dental3.jpg','../../assets/dental5.jpg' ];
-
+  personimage="https://image.shutterstock.com/image-photo/confident-smiling-doctor-posing-looking-600w-491761618.jpg";
   paused = false;
   unpauseOnArrow = false;
   pauseOnIndicator = false;

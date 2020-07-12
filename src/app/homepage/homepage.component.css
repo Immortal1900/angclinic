@@ -31,6 +31,11 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+.topbarbutton:hover{
+
+ background-color: #46dba3;
+}
+
 .carousal{
     margin: 0 auto;
 }
@@ -52,10 +57,9 @@ height: 400px;}
     width: 100%;
   }
 .box{
- 
 
     color: white;
-   
+
     transition:  all 0.5s ease;
 }
 .box:hover{
@@ -92,14 +96,22 @@ height: 400px;}
 }
 
 .bottom1{ 
+
 transition: ease 1s;
+color: white;
 }
 .bottom1 a{
-    color: white;
+    color: #5aa8ab;
+}
+.bottom1 h4{
+    color: #5aa8ab;
+    text-align: left;
 }
 .bottom1:hover{
     margin-top: -1%;
 }
+
+
 .col-md-3{
     display: inline-block;
     margin-left:-4px;
@@ -121,4 +133,17 @@ transition: ease 1s;
   body .no-padding{
     padding-left: 0;
     padding-right: 0;
-     }
+ }
+ .smalltext{
+    font-size: 13px;
+ }
+ .littletopmargin{
+     margin-top: 5%;
+ }
+ .drimage:hover{
+     border-color: cornflowerblue;
+     border-style: inset;
+     border-width: 8px;
+ }
+
+   

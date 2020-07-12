@@ -48,6 +48,8 @@ import {MatTreeModule} from '@angular/material/tree';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BookappointmentComponent } from './bookappointment/bookappointment.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppointmentsComponent,
     MainNavComponent,
     PatientsComponent,
-    HomepageComponent
+    HomepageComponent,
+    BookappointmentComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
