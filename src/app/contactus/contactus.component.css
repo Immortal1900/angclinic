@@ -35,3 +35,21 @@
     background-color: rgb(219, 196, 105);
    
 }
+.rightinput{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5%;
+}
+.greenborder{
+    border: green 4px solid;
+}
+.redborder{
+    border: red 4px solid;
+}
+.blueborder{
+    border: rgb(53, 114, 184) 4px solid;
+}
+
+
+
+

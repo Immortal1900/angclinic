@@ -5,6 +5,7 @@ import {AngularFireDatabaseModule}  from '@angular/fire/database';
 import {environment} from '../environments/environment'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 import { AppointmentsComponent } from './appointments/appointments.component';
@@ -110,7 +111,8 @@ import { ContactusComponent } from './contactus/contactus.component';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    NgbModule,NgbPaginationModule, NgbAlertModule
+    NgbModule,NgbPaginationModule, NgbAlertModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

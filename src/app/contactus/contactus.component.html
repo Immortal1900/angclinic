@@ -8,10 +8,9 @@
 </div>
 
 
-
 <div  style="text-align: center;">
     <div class="sidetitle">
-        <h1>HOW TO GET TO US</h1>
+       HOW TO GET TO US
     </div>
        <div class="row grr">
            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
@@ -48,3 +47,78 @@
         </div>
        </div>
 </div>
+<form [formGroup]="contactform" (ngSubmit)="onSubmit(contactform)" style="background-color: whitesmoke;padding-bottom: 10%;">
+   <div class="sidetitle" style="text-align: center;"> Contact us</div>
+   
+    <div class="row">
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12" >
+            
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-11 col-11" style="justify-content: center;">
+                    <div class="rightinput">
+                        <i class="fa fa-user" style="margin-top:9px;margin-right: 4px;"></i>
+                        <input class="form-control col-md-6 col-lg-6 col-10 col-xs-10" placeholder="Name" id="ex1"  [formControl]="contactform.controls['name']" type="text"
+                        [ngClass]="{'greenborder' : contactform.controls['name'].valid==true,'redborder': !contactform.controls['name'].valid === true && contactform.controls['name'].pristine ===false   }"
+                        required >
+                        <span *ngIf="!contactform.controls['name'].valid === true && contactform.controls['name'].pristine ===false"><i style="color: red;margin-left: 10%;" class="fa fa-exclamation"></i></span>
+                     
+
+                    </div>
+                    <div class="rightinput">
+                        <i class="  fa fa-phone"  style="margin-top:9px;margin-right: 4px;"></i>
+                        <input class="form-control col-md-6 col-lg-6 col-10 col-xs-10"  id="ex1"  placeholder="Phone no" required 
+                        [formControl]="contactform.controls['phno']"
+                        
+                        [ngClass]="{'greenborder' : contactform.controls['phno'].valid==true,'redborder': !contactform.controls['phno'].valid === true && contactform.controls['phno'].touched ===true   }"
+                        required >
+                        <span *ngIf="!contactform.controls['phno'].valid === true && contactform.controls['phno'].touched===true"><i style="color: red;margin-left: 10%;" class="fa fa-exclamation"></i></span>
+                        
+                  
+                        
+                    </div>
+                    <div class="rightinput">
+                        <i class="fa fa-envelope" style="margin-top:9px;margin-right: 4px;"></i>
+                        <input class="form-control col-md-6 col-lg-6 col-10 col-xs-10" placeholder="Email" id="ex1"
+                        [formControl]="contactform.controls['email']"
+                        
+                        [ngClass]="{'greenborder' : contactform.controls['email'].valid==true && contactform.controls['email'].touched==true}"
+                        required >
+                   
+                    </div>
+                </div>
+            </div>
+            </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12" >
+           <div class="col-lg-12 col-md-12 col-sm-12 col-lg-12">
+            <div class="row" style="justify-content: center;">
+                <textarea style="margin-top: 5%;" id="w3review" name="w3review" placeholder="Your message here..." rows="8" cols="50" required                   
+                [formControl]="contactform.controls['msg']"
+                        
+                [ngClass]="{'greenborder' : contactform.controls['msg'].valid==true,'redborder': !contactform.controls['msg'].valid === true && contactform.controls['msg'].touched ===true   }"
+                required ></textarea>
+                <span *ngIf="!contactform.controls['msg'].valid === true && contactform.controls['msg'].touched===true"><i style="color: red;margin-left: 10%;" class="fa fa-exclamation"></i></span>           
+                
+              
+            </div>
+           </div>
+          
+          </div>
+          </div>
+          <div style="text-align: center;">
+            <button class="btn btn-warning"style="text-align: center;margin-top:2%"
+            
+            [disabled]="contactform.controls['name'].invalid==true || contactform.controls['phno'].invalid==true || contactform.controls['msg'].invalid==true"
+            type="submit">Send</button>
+          </div>
+          <div class="toast" role="alert" data-delay="10000" data-autohide="false" style="position: inherit;">
+            <div class="toast-header">
+           
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div  class="toast-body" style="background-color: rgb(82, 165, 114);">Your query has been added Successfully</div>
+        </div>
+</form>
+
