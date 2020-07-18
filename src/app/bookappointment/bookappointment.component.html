@@ -1,163 +1,219 @@
-<div class="row" style="background-color: rgb(255, 248, 230);">
-    <div class="col-12 col-sm-12 col-md-6 col-lg-6"  >
+<div class="row" >
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6 " style="background-color: rgb(255, 248, 230);" >
     
        
-         <div class="row">
-           <div class="col-lg-12 d-flex justify-content-center">
+         <div class="row" style="background-color: cornflowerblue;" >
+           <div class="col-lg-12 col-sm-12 col-md-12 col-12 d-flex justify-content-center">
             <div class="circle">
               1      
             </div>
            </div>
-           <div class="col-lg-12 d-flex justify-content-center">
+           <div class="col-lg-12 col-sm-12 col-md-12 col-12 d-flex justify-content-center">
              <h3>Select Date and Time</h3>
            </div>
          </div>
        
-         <div class="col-lg-12 d-flex justify-content-center">
+         
           <div class="row" >
-      <div class="col-lg-6">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <h1>Select Date</h1></div>
-       <div class="col-lg-12 d-flex justify-content-center"> <ngb-datepicker #dp [(ngModel)]="model" (dateSelect)="onDateSelect($event)" (navigate)="date = $event.next"></ngb-datepicker></div>
+      <div class="col-lg-6" >
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 col-md-12 col-12 d-flex justify-content-center"  >
+            <h3> Select Date
+            </h3>
+            </div>
+            <div class="col-lg-12 col-sm-12 col-md-12 col-12 d-flex justify-content-center"> <ngb-datepicker #dp [(ngModel)]="model" (dateSelect)="onDateSelect($event)" (navigate)="date = $event.next"></ngb-datepicker></div>
       </div>
-      <div class="col-lg-6">
-       <div class="col-lg-12 d-flex justify-content-center">
-         <h1>Choose Time Slot</h1>
-       </div>
-
-
-        <div class="col-lg-12 d-flex justify-content-center">
+        </div>
+       
+       
+      <div class="col-lg-6 " >
+        <div class="row">
+          <div class="col-lg-12"  >
+            <h3> Choose Time Slot</h3>
+          </div>
+           
+               
+         <div class="container">
           <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-            <button class="btn btn-secondary" ngbDropdownToggle>Morning</button>
+            <button class="btn btn-secondary btn-sm" ngbDropdownToggle>Morning</button>
             <div class="dropdown-menu" ngbDropdownMenu>
               <button ngbDropdownItem (click)="settime('10:00')">10:00</button>
               <button ngbDropdownItem (click)="settime('11:00')">11:00</button>
               <button ngbDropdownItem (click)="settime('11:00')">12:00</button>
             </div>
           </div>
-          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-            <button class="btn btn-warning" ngbDropdownToggle>Afternoon</button>
+        
+        
+        
+           
+            <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-warning btn-sm" ngbDropdownToggle>Afternoon</button>
             <div class="dropdown-menu" ngbDropdownMenu>
               <button ngbDropdownItem (click)="settime('14:00')">14:00</button>
               <button ngbDropdownItem (click)="settime('15:00')">15:00</button>
               <button ngbDropdownItem (click)="settime('16:00')">16:00</button>
             </div>
           </div>
-          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-            <button class="btn btn-dark" ngbDropdownToggle>Evening</button>
-            <div class="dropdown-menu" ngbDropdownMenu>
-              <button ngbDropdownItem (click)="settime('17:00')">17:00</button>
-              <button ngbDropdownItem (click)="settime('18:00')">18:00</button>
-              <button ngbDropdownItem (click)="settime('19:00')">19:00</button>
-              <button ngbDropdownItem (click)="settime('20:00')">20:00</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12 d-flex justify-content-center">
-          <h1>{{dateselected === true ? selectedate  : 'Date' }} </h1><h1>/</h1>        
-          <h1>{{dateselected === true ? date.month  : 'Month' }} </h1><h1>/</h1>     
-          <h1>{{dateselected === true ? date.year  : 'Year' }} </h1>    
-        </div>
-        <div class="col-lg-12 d-flex justify-content-center">
-          <h1>Time:{{time}}</h1>         
-        </div>
-        <div class="col-lg-12 d-flex justify-content-center">
-          <div class="toast" role="alert" data-delay="10000" data-autohide="false" style="position: inherit;">
-            <div class="toast-header">
+        
            
-                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
+            <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+              <button class="btn btn-dark btn-sm" ngbDropdownToggle>Evening</button>
+              <div class="dropdown-menu" ngbDropdownMenu>
+                <button ngbDropdownItem (click)="settime('17:00')">17:00</button>
+                <button ngbDropdownItem (click)="settime('18:00')">18:00</button>
+                <button ngbDropdownItem (click)="settime('19:00')">19:00</button>
+                <button ngbDropdownItem (click)="settime('20:00')">20:00</button>
+              </div>
             </div>
-            <div  class="toast-body" style="background-color: rgb(82, 165, 114);">Your query has been added Successfully</div>
-        </div>      
+         </div>
+         
+
         </div>
-       
-        <button class="btn btn-success"style="float: right;" [disabled]="checkavailabilty" > Next</button>
-        <button class="btn btn-success"style="float: right;"> Check Availability</button>
+      
+
+
+      
+        
+   
+        <div class="col-lg-12 d-flex justify-content-center" style="margin-top: 100px;">
+         <h2> Time:</h2><h1>{{time}}</h1>         
+        </div>
+        <div class="col-lg-12 d-flex"
+        [ngClass]="{'displaynone':dateselected==false,'alert alert-danger':closed==true && checkavailablilticlicked==true,'alert alert-success':closed==false && checkavailablilticlicked==true}" 
+            
+        >
+          <h3>{{closedmsg}}</h3>
+        </div>
+    
+     
+        Selected Date is
+        <b> {{dateselected === true ? selectedate  : 'Date' }} /        
+         {{dateselected === true ? date.month  : 'Month' }} /     
+         {{dateselected === true ? date.year  : 'Year' }}  </b><b>{{selectedDay}}</b>
+   
+        <button class="btn btn-success"style="float: right;" (click)="checkclosed()" [disabled]="!dateselected" >Check Availability</button>
+     
        </div>
       </div>
          <hr/>
-            </div>   
+            
 </div>
 
 
 
+
     <div class="col-12 col-sm-12 col-md-6 col-lg-6" style="background-color: rgb(199, 197, 192);"
-    [ngClass]="{'disablediv': checkavailabilty==true }">
+    [ngClass]="{'disablediv': !(checkavailablilticlicked==true && closed==false) }">
       <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center">
+        <div class="col-lg-12 d-flex justify-content-center" style="background-color: cornflowerblue;">
           <div class="circle">
             2
            </div>
           </div>
-          <div class="col-lg-12 d-flex justify-content-center">
+          <div class="col-lg-12 d-flex justify-content-center"style="background-color: cornflowerblue;">
             <h3>Personal Details</h3>
           </div>
-          <div class="col-lg-12 d-flex justify-content-center">
-            <form [formGroup]="appointmentform"  style="background-color: whitesmoke;padding-bottom: 30%;">
-              <div class="col-lg-12 d-flex justify-content-center">
-                
-                <i class="fa fa-user" style="margin-top:9px;margin-right: 4px;"></i>
-                <input class="form-control col-md-12 col-lg-12 col-12 col-xs-12" placeholder="Name *" id="ex1"  [formControl]="appointmentform.controls['name']" type="text"
-                [ngClass]="{'greenborder' : appointmentform.controls['name'].valid==true,'redborder': !appointmentform.controls['name'].valid === true && appointmentform.controls['name'].pristine ===false   }"
-                required >
-                <span *ngIf="!appointmentform.controls['name'].valid === true && appointmentform.controls['name'].pristine ===false"><i style="color: red;margin-left: 10%;" class="fa fa-exclamation"></i></span>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-12 ">
+            <div class="container" style="justify-content: center;">
+              <form [formGroup]="appointmentform" (ngSubmit)="onSubmit(appointmentform)" style="background-color: whitesmoke;padding-bottom: 30%;">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center margintop">
+                  
+                  <i class="fa fa-user" style="margin-top:9px;margin-right: 4px;"></i>
+                  <input class="form-control col-md-12 col-lg-12 col-12 col-xs-12" placeholder="Name *" id="ex1"  [formControl]="appointmentform.controls['name']" type="text"
+                  [ngClass]="{'greenborder' : appointmentform.controls['name'].valid==true,'redborder': !appointmentform.controls['name'].valid === true && appointmentform.controls['name'].touched ===true,'blueborder': appointmentform.controls['name'].touched === false && appointmentform.controls['name'].pristine === true}"
+                  required >
+                  <span *ngIf="!appointmentform.controls['name'].valid === true && appointmentform.controls['name'].pristine ===false"><i style="color: red;margin-left: 10%;" class="fa fa-exclamation"></i></span>
+               
+                </div>
              
-              </div>
-              <div class="col-lg-12 d-flex justify-content-center"> 
-              
-                <div style="height: 30px;" hidden="false">
+                <div class="col-lg-12 d-flex justify-content-center margintop">     
+                  <i class="  fa fa-phone"  style="margin-top:9px;margin-right: 4px;"></i>
+                  <input class="form-control col-md-12 col-lg-12 col-12 col-xs-12" placeholder="Phno *" id="ex2"  [formControl]="appointmentform.controls['phno']" type="text"
+                  [ngClass]="{'greenborder' : appointmentform.controls['phno'].valid==true,'redborder': !appointmentform.controls['phno'].valid === true && appointmentform.controls['phno'].touched ===true,'blueborder': appointmentform.controls['phno'].touched === false && !appointmentform.controls['phno'].valid===true}"
+                  required >
+                  <span *ngIf="!appointmentform.controls['phno'].valid === true && appointmentform.controls['phno'].touched ===true"><i style="color: red;margin-left: 10%;" class="fa fa-exclamation"></i></span>
+                </div>
+                <div class="col-lg-12 d-flex justify-content-center " style="margin-left:9px">     
+            
+                  <input class="form-control col-md-12 col-lg-12 col-12 col-xs-12 "   placeholder="Confirm phno *" id="ex5"  [formControl]="appointmentform.controls['confirmphno']" type="text"
+                  [ngClass]="{'greenborder' : appointmentform.controls['confirmphno'].valid==true,'redborder': !appointmentform.controls['confirmphno'].valid === true && appointmentform.controls['confirmphno'].touched ===true,'blueborder': appointmentform.controls['confirmphno'].touched === false && !appointmentform.controls['confirmphno'].valid===true}"
+                  required autocomplete="off" >
+                  <span *ngIf=" !appointmentform.controls['confirmphno'].valid === true && appointmentform.controls['confirmphno'].touched ===true"><i style="color: red;margin-left: 10%;" class="fa fa-exclamation"></i></span>
+                </div>  <div class="alert alert-danger" style="height: 30px;" *ngIf="appointmentform.controls['confirmphno'].valid==false && appointmentform.controls['confirmphno'].touched==true">
                   Phone number doesn't match
                 </div>
-              </div>
-              <div class="col-lg-12 d-flex justify-content-center">     
-                <i class="  fa fa-phone"  style="margin-top:9px;margin-right: 4px;"></i>
-                <input class="form-control col-md-12 col-lg-12 col-12 col-xs-12" placeholder="Phno *" id="ex2"  [formControl]="appointmentform.controls['phno']" type="text"
-                [ngClass]="{'greenborder' : appointmentform.controls['phno'].valid==true,'redborder': !appointmentform.controls['phno'].valid === true && appointmentform.controls['phno'].pristine ===false   }"
-                required >
-                <span *ngIf="!appointmentform.controls['phno'].valid === true && appointmentform.controls['phno'].pristine ===false"><i style="color: red;margin-left: 10%;" class="fa fa-exclamation"></i></span>
-              </div>
-              <div class="col-lg-12 " style="margin-left:9px">     
-          
-                <input class="form-control col-md-12 col-lg-12 col-12 col-xs-12" placeholder="Confirm phno *" id="ex5"  [formControl]="appointmentform.controls['confirmphno']" type="text"
-                [ngClass]="{'greenborder' : appointmentform.controls['confirmphno'].valid==true,'redborder': !appointmentform.controls['confirmphno'].valid === true && appointmentform.controls['confirmphno'].pristine ===false   }"
-                required autocomplete="off" >
-                <span *ngIf="!appointmentform.controls['confirmphno'].valid === true && appointmentform.controls['confirmphno'].pristine ===false"><i style="color: red;margin-left: 10%;" class="fa fa-exclamation"></i></span>
-              </div>
-           
+               
              
-              <div class="col-lg-12 d-flex justify-content-center">
-                <i class="fa fa-envelope" style="margin-top:9px;margin-right: 4px;"></i>
-                <input class="form-control col-md-12 col-lg-12 col-12 col-xs-12" placeholder="Email" id="ex3"
-                [formControl]="appointmentform.controls['email']"
+               
+                <div class="col-lg-12 d-flex justify-content-center margintop">
+                  <i class="fa fa-envelope" style="margin-top:9px;margin-right: 4px;"></i>
+                  <input class="form-control col-md-12 col-lg-12 col-12 col-xs-12" placeholder="Email" id="ex3"
+                  [formControl]="appointmentform.controls['email']"
+                  
+                  [ngClass]="{'greenborder' : appointmentform.controls['email'].valid==true,'blueborder': appointmentform.controls['email'].touched === false && !appointmentform.controls['email'].valid===true  ||  checkifemailempty(appointmentform )===true,
+                  'redborder' : appointmentform.controls['email'].invalid==true &&  appointmentform.controls['email'].touched==true
+                }"
+        
+                  required > 
+                  <span *ngIf=" appointmentform.controls['email'].invalid==true &&  appointmentform.controls['email'].touched==true && checkifemailempty(appointmentform)==false"><i style="color: red;margin-left: 10%;" class="fa fa-exclamation"></i></span>
                 
-                [ngClass]="{'greenborder' : appointmentform.controls['email'].valid==true && appointmentform.controls['email'].touched==true}"
-                required >     
-           </div>
-           <div class="col-lg-12 d-flex justify-content-center">
-            <i class="fas fa-file-medical" style="margin-top:9px;margin-right: 4px;"></i>
-            <input class="form-control col-md-12 col-lg-12 col-12 col-xs-12" placeholder="Subject" id="ex4"           
-            required >     
-       </div>
+             </div>
+             <div class="col-lg-12 d-flex justify-content-center margintop">
+              <i class="fas fa-file-medical" style="margin-top:9px;margin-right: 4px;"></i>
+              <input class="form-control col-md-12 col-lg-12 col-12 col-xs-12" placeholder="Subject" id="ex4"    
+              [formControl]="appointmentform.controls['subject']"       
+              required 
+              [ngClass]="{'greenborder' : appointmentform.controls['subject'].valid==true,'blueborder': appointmentform.controls['subject'].invalid=== true 
+            }">     
+           
+         
+         </div>
+        
+        
+             
+             <div class="col-lg-12 d-flex justify-content-center margintop">
+          
+              <textarea style="margin-top: 5%;" id="w3review" name="w3review" placeholder="Your message here..." rows="4" cols="50" required                   
+              [formControl]="appointmentform.controls['msg']"
+                      
+              [ngClass]="{'greensquareborder' : appointmentform.controls['msg'].valid==true,'bluesquareborder': appointmentform.controls['msg'].invalid=== true 
+            }"
+              
+              ></textarea>
+             
+                
+                
+                
+        
+         </div>
+            <button class="btn btn-success" style="float: right;margin-top: 60px;"
+            [disabled]="appointmentform.controls['name'].invalid==true || appointmentform.controls['confirmphno'].invalid==true "
+              type="submit">Book Appointment</button>
+        
+        
+              <div class="toast" role="alert" data-delay="10000" data-autohide="false"
+              
+              style="top: 50%;left: 40%;position:fixed;
+              width: 70%;"
+              >
+                <div class="toast-header">
+               
+                    <button style="float: right;" type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div  class="toast-body" style="background-color: #5cb85c;">Your Appointment has been booked Successfully</div>
+              </div>
+        
+            
+             
+        
+            </form>
+            </div>
      
 
-           
-           <div class="col-lg-12 d-flex justify-content-center">
-            <i class="fas fa-comment-medical" style="margin-top:9px;margin-right: 4px;"></i>
-            <textarea style="margin-top: 5%;" id="w3review" name="w3review" placeholder="Your message here..." rows="4" cols="50" required                   
-            [formControl]="appointmentform.controls['msg']"
-                    
-            [ngClass]="{'greenborder' : appointmentform.controls['msg'].valid==true,'redborder': !appointmentform.controls['msg'].valid === true && appointmentform.controls['msg'].touched ===true   }"
-            required ></textarea>
-            <span *ngIf="!appointmentform.controls['msg'].valid === true && appointmentform.controls['msg'].touched===true"><i style="color: red;margin-left: 10%;" class="fa fa-exclamation"></i></span>           
-
-       </div>
-          <button class="btn btn-success" style="float: right;">Book Appointment</button>
+      
  
-           
-
-          </form>
           </div>
          
           

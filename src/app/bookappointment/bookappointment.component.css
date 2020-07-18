@@ -14,22 +14,24 @@ select.custom-select {
 
   }
   .center{
-   
    display: flex;
-   
-
    justify-content: center;
    background-color: lightblue;
    
   }
   .greenborder{
-    border: green 4px solid;
+    border: green 2px solid;
+    border-radius: 50px;
 }
 .redborder{
-    border: red 4px solid;
+    border: red 2px solid;
+    border-radius: 50px;
 }
 .blueborder{
-    border: rgb(53, 114, 184) 4px solid;
+    border: rgb(53, 114, 184) 2px ;
+    border-style: solid;
+    border-radius: 50px;
+    
 }
 .disablediv
 {
@@ -38,4 +40,21 @@ select.custom-select {
   /* for "disabled" effect */
   opacity: 0.5;
   background: #CCC;
+}
+.margintop{
+  margin-top: 5%;
+}
+.bluesquareborder{
+  border: rgb(53, 114, 184) 2px ;
+  border-style: solid;
+}
+.greensquareborder{
+  border: green 2px solid;
+}
+.displaynone{
+  visibility: hidden;
+}
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
 }
