@@ -1,0 +1,132 @@
+
+<nav class="navbar navbar-expand-lg sticky-top topbar" style="height: 60px;width: 100%;background-color: white;">
+    <a class="navbar-brand" [routerLink]="'.'">HOME/LOGO</a>
+  
+    <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+      &#9776;
+    </button>
+  
+    <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse " style="width: 100%;background-color: white;">
+      <div class="navbar-nav topbar1">
+  
+        <button mat-button class="nav-item topbarbutton"  
+        
+        
+        [routerLink]="'/treatments'"
+        >Treatments</button>
+        
+        <button mat-button class="nav-item topbarbutton"
+        
+        [routerLink]="'/gallery'"
+         routerLinkActive="router-link-active" 
+        
+        >Gallary</button>
+  
+        <button mat-button class="nav-item topbarbutton"
+        
+        [routerLink]="'/bookappointments'">Book Appointment</button>
+  
+        <button mat-button class="nav-item topbarbutton"
+        
+        [routerLink]="['/contactus']" routerLinkActive="router-link-active" 
+        
+        >Contact us</button>
+        
+        <button mat-button class="nav-item topbarbutton"
+        
+        [routerLink]="['/aboutus']" routerLinkActive="router-link-active" 
+        
+        >About us</button>
+        
+       </div>
+    </div>
+  </nav>
+ 
+   <!--MAIN NAVIGATION-->
+   <router-outlet></router-outlet>
+   <!--MAIN -->
+
+<!--FOOTER-->
+<div class="row" style="position:-webkit-sticky;">
+
+    <div class="col-md-4 col-lg-4 bottom1" style="background-color:#282d36" >
+      <div style="padding-top: 5%;">
+        <h2 style="text-align: center;">QUICK LINKS</h2>
+        <hr style="background-color: whitesmoke;">
+          <div class="d-flex justify-content-center">
+            <ul>
+              <li>
+                <a href="#"><h3>Home</h3></a>
+              </li>
+              <li>
+                <a href="#"><h3>Treatments</h3></a>
+              </li>
+              <li>
+                <a href="#"><h3>Dental Implants</h3></a>
+              </li>
+              <li>
+                <a href="#"><h3>Blogs</h3></a>
+              </li>
+              <li>
+                <a href="#"><h3>About us</h3></a>
+              </li>
+             
+            </ul>
+          </div>
+      </div>
+    
+    </div>
+    
+    
+    <div  class="col-md-4 col-lg-4 bottom1" style="text-align: center;background-color:#303235;">
+     <div style="padding-top: 5%;">
+      <h2> <i class="fas fa-clock"></i> OPENING HOURS</h2>
+      <hr style="background-color: white;">
+      <table style="margin: 0 auto;">
+        <tr>
+          <td><h4>Monday</h4></td><td> <h3>10:00 AM - 9:00PM</h3></td>
+        </tr>
+        <tr>
+          <td><h4>Tuesday</h4></td><td><h3>10:00 AM - 9:00PM</h3></td>
+        </tr>
+        <tr>
+          <td><h4>Wednesday</h4></td><td> <h3>10:00 AM - 9:00PM</h3></td>
+        </tr>
+        <tr>
+          <td><h4>Thursday</h4></td><td> <h3>10:00 AM - 9:00PM</h3></td>
+        </tr>
+        <tr>
+          <td><h4>Friday</h4></td><td> <h3>10:00 AM - 9:00PM</h3></td>
+        </tr>
+        <tr>
+          <td><h4>Saturday</h4></td><td> <h3>10:00 AM - 9:00PM</h3></td>
+        </tr>
+        <tr>
+          <td><h4>Sunday</h4></td><td> <h3>Closed</h3></td>
+        </tr>
+      
+      </table>
+     </div>
+    
+    </div>
+ 
+    <div class="col-md-4 col-lg-4 bottom1" style="background-color: #215c84;text-align: center;">
+    <div style="padding-top: 5%;">
+        
+      <h2><i class="fas fa-map-marker-alt"></i> CONTACT US</h2>
+    <hr style="background-color: #56b0ce;;">
+    <br>
+    
+    <h3 style="color: rgb(221, 217, 217);"><i class="fas fa-location-arrow"></i>
+      No. 20/5 N.S Complex ,<br> Above Chef Baker's, <br>Kadubeesenahalli Outer Ring <br>Road Bangalore - 560037</h3>
+    
+      <h3><i class="fas fa-phone"></i> 9131392615</h3>
+      <h3 style="color: #56b0ce;"><i class="fas fa-envelope"></i> himanshulahare9@gmail.com</h3>
+    
+    </div>
+    </div>
+    
+    </div>
+    

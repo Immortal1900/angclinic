@@ -1,3 +1,6 @@
+
+import { Routes, RouterModule } from "@angular/router";
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {AngularFireModule} from '@angular/fire';
@@ -8,7 +11,6 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
-import { AppointmentsComponent } from './appointments/appointments.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -51,20 +53,46 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BookappointmentComponent } from './bookappointment/bookappointment.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { PeopleComponent } from './people/people.component';
+import { TreatmentsComponent } from './treatments/treatments.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { HeaderandfooterComponent } from './headerandfooter/headerandfooter.component';
+import { GalleryComponent } from './gallery/gallery.component';
+
+const routes:Routes=  
+[{ path: '', component:HomepageComponent },
+{ path: 'aboutus', component: AboutusComponent },
+{ path: 'treatments', component: TreatmentsComponent },
+{ path: 'bookappointments', component: BookappointmentComponent },
+{ path: 'contactus', component: ContactusComponent },
+{path: 'gallery',component:GalleryComponent}
+
+
+
+
+];
+
 
 @NgModule({
   declarations: [
+    
     AppComponent,
-    AppointmentsComponent,
+    
     MainNavComponent,
     PatientsComponent,
     HomepageComponent,
     BookappointmentComponent,
-    ContactusComponent
+    ContactusComponent,
+    PeopleComponent,
+    TreatmentsComponent,
+    AboutusComponent,
+    HeaderandfooterComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    RouterModule.forRoot(routes),
+    
     AngularFireModule.initializeApp(environment.firebase),
     FormsModule,
     AngularFireDatabaseModule,

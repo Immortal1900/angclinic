@@ -1,0 +1,21 @@
+.imagecontain {
+    object-fit: fill;
+    height: 200px;
+    width: 400px;
+  }
+  .Row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .column {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  @media only screen and (max-width: 540px) {
+    .imagecontain {
+      object-fit: fill;
+      height: 100px;
+      width: 200px;
+    }
+  }
+  

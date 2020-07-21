@@ -1,0 +1,43 @@
+.bottom1{ 
+    font-size: small;
+    
+    color: whitesmoke;
+    }
+    .bottom1 a{
+        color: #5aa8ab;
+    }
+    .bottom1 h4{
+        color: #5aa8ab;
+        font-weight: 200;
+        text-align: left;
+    }
+    .bottom1 h2{
+        color: whitesmoke;   
+        font-weight: 100;
+        font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    }
+    .bottom1 h3{
+
+        font-weight: 300;
+     
+    }
+
+    .topbarbutton:hover{
+        background-color: rgb(78, 182, 78);
+    }
+.topbar{
+   
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.topbar:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.topbar1{
+    
+        width: 100%;height: 100%;
+        justify-content: space-evenly;
+        display: flex;
+     
+    
+}
