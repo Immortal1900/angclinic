@@ -235,6 +235,11 @@ color: white;
 }
 @media only screen and (max-width: 589px) {
 
+  .c1{
+
+    width: 90% !important;
+       
+  }
   .imagecontain{
     height: 100px !important;
     width: 150px !important;
@@ -273,8 +278,37 @@ color: white;
   height: 250px;
   width: 250px;
   margin-left: 4% ;
- 
-  
 }
 
+.circle{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover; 
+  background-size: 140%;  
+  background-image: url(https://image.shutterstock.com/image-photo/face-beautiful-young-girl-clean-600w-328676489.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+
+.testimonialimage{
+  padding: 8%;
+  background-image: url(https://image.shutterstock.com/image-photo/face-beautiful-young-girl-clean-600w-328676489.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+.cardh:hover{
+  border: #055685 2px solid;
+}
+.testimonialtext{
+  color: rgb(83, 82, 82);
+  font-style: italic;
+  font-size: 18px;
+
+}
    

@@ -12,7 +12,7 @@
 }
 .imagecontain{
     padding: 8%;
-    object-fit:contain;
+    object-fit:fill;
     height: 100%;
     width: 100%;
 }
