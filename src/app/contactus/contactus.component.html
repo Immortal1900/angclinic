@@ -9,8 +9,8 @@
 
 
 <div  style="text-align: center;">
-    <div class="sidetitle">
-       HOW TO GET TO US
+    <div class="open-sans">
+       <h1>HOW TO GET TO US</h1>
     </div>
        <div class="row grr">
            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
@@ -47,8 +47,10 @@
         </div>
        </div>
 </div>
-<form [formGroup]="contactform" (ngSubmit)="onSubmit(contactform)" style="background-color: whitesmoke;padding-bottom: 10%;">
-   <div class="sidetitle" style="text-align: center;"> Contact us</div>
+
+
+<form [formGroup]="contactform" (ngSubmit)="onSubmit(contactform)" style="background-color: whitesmoke;padding-bottom: 2%;">
+   <div class="open-sans" style="text-align: center;"> <h1>Contact us</h1></div>
    
     <div class="row">
 
@@ -105,20 +107,24 @@
           
           </div>
           </div>
+         <div style="width: 100%;display: flex;justify-content: center;">
+            <div class="toast" role="alert" data-delay="10000" data-autohide="false">
+                <div class="toast-header">
+               
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="toast-body" style="background-color: rgb(82, 165, 114);">Your query has been added Successfully</div>
+            </div>
+         </div>
+
           <div style="text-align: center;">
             <button class="btn btn-warning"style="text-align: center;margin-top:2%"
             
             [disabled]="contactform.controls['name'].invalid==true || contactform.controls['phno'].invalid==true || contactform.controls['msg'].invalid==true"
             type="submit">Send</button>
           </div>
-          <div class="toast" role="alert" data-delay="10000" data-autohide="false" style="position: inherit;">
-            <div class="toast-header">
-           
-                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div  class="toast-body" style="background-color: rgb(82, 165, 114);">Your query has been added Successfully</div>
-        </div>
+         
 </form>
 

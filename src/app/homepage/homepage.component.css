@@ -21,10 +21,9 @@
     height: 70%;
   }
   .slideimg {
-   
-    object-fit:fill;
-    height: 100%;
-    width: 100%;
+    object-fit: fill;
+    height: 600px;
+    width: 100%
   }
   .top-left {
     position: absolute;
@@ -177,7 +176,7 @@ color: white;
  .drimage:hover{
      border-color: cornflowerblue;
      border-style: inset;
-     border-width: 8px;
+     border-width: 3px;
  }
  .myp {
   text-align: center;
@@ -195,25 +194,23 @@ color: white;
 .imagesubtitle {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 .imagetitle {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 17px;
   padding-top: 10px;
 }
-.imagecontain {
-  object-fit: fill;
-  height: 150px;
-  width: 250px;
-}
-@media only screen and (max-width: 800px) {
+
+@media only screen and (max-width: 1012px) {
 
   .container1{
     justify-content: center !important;
     flex-direction: column !important;
+    margin: auto !important;
+    
   }
   .c1{
     height: 250px !important;
@@ -231,6 +228,7 @@ color: white;
   }
   .c2{
     margin-left: 4% !important;
+    margin-top: 4% !important;
   }
 }
 @media only screen and (max-width: 589px) {
@@ -254,30 +252,43 @@ color: white;
   display: flex;
   flex-direction: row;
   width: 100%;
+  
   justify-content: center;
   margin-left: auto;
+
 }
 .container2{
   display: flex;
   flex-direction: row;
+  
  
 }
 .container3{
+  margin-top: 4%;
   display: flex;
   flex-direction: row;
- 
+ height: 100%;
+ width: 100%;
 }
 .c1{
   height: 400px;
-  width: 250px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   margin-left: 4%;
+  
+
 }
 .c2{
-  height: 250px;
-  width: 250px;
+  height: 300px;
+  width: 350px;
   margin-left: 4% ;
+ 
+}
+.imagecontain {
+  object-fit: fill;
+  height: 200px;
+  width: 300px;
 }
 
 .circle{
@@ -302,6 +313,9 @@ color: white;
   height: 100%;
   width: 100%;
 }
+.cardh{
+  margin-left: 4%;
+}
 .cardh:hover{
   border: #055685 2px solid;
 }
@@ -309,6 +323,34 @@ color: white;
   color: rgb(83, 82, 82);
   font-style: italic;
   font-size: 18px;
+
+}
+.rightinput{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5%;
+}
+.greenborder{
+  border: green 4px solid;
+}
+.redborder{
+  border: red 4px solid;
+}
+.blueborder{
+  border: rgb(53, 114, 184) 4px solid;
+}
+.testimonialcontainer{
+  width: 80%;display: flex;margin: auto;
+}
+@media only screen and (max-width: 800px) {
+  .testimonialcontainer{
+    width: 100%;display: flex;margin: auto;
+    flex-direction: column;
+    
+  }
+  .cardh{
+    margin-top: 2%;
+  }
 
 }
    

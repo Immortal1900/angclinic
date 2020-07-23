@@ -1,5 +1,11 @@
+import { ContactusComponent } from './../contactus/contactus.component';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbSlideEvent, NgbSlideEventSource, NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import * as firebase from 'firebase/app';
+import 'firebase/firestore';
+
+declare var $: any;
 
 @Component({
   selector: 'app-homepage',
@@ -37,8 +43,48 @@ export class HomepageComponent implements OnInit {
     }
   }
   imagelink:"https://firebasestorage.googleapis.com/v0/b/sampletvf-8aa59.appspot.com/o/mcdonalds-burger-fries-soda.jpg?alt=media&token=d9abb834-07c5-48b6-b53b-cc897bd7f442";
-  constructor() { }
+  
+  emailPattern="(^$|^.*@.*\..*$)";
+  phnopattern="[0-9]{10}";
+  contactform:FormGroup;
+  allvalid:boolean;
 
+  constructor(public fb: FormBuilder) {
+
+    this.contactform = this.fb.group({
+      name: ['', [Validators.required]], 
+      email: ['',[Validators.pattern(this.emailPattern)]],
+      phno:['', [Validators.required, Validators.pattern(this.phnopattern)]],
+      msg: ['', [Validators.required]], 
+     
+        })
+  
+  
+  }
+  onSubmit(contactform){
+    let email: string = contactform.value.email;
+    let name: string = contactform.value.name;
+    let phno: string = contactform.value.phno;
+    let msg: string = contactform.value.msg;
+    console.log(email,name,phno,msg);
+    $('.toast').toast('show');
+    let r = Math.random().toString(36).substring(2,9);
+    console.log("random", r);
+    firebase.firestore().collection("Contactus").doc(r).set({
+      name:contactform.value.name,
+      phno:contactform.value.phno,
+      email:contactform.value.email,
+      msg:contactform.value.msg,
+    }).then(()=>{
+      
+      
+      console.log("Sent")
+
+
+    }).catch((err)=>{console.log("err")});
+     contactform.reset();
+    
+  }
   ngOnInit(): void {
   }
 

@@ -3,9 +3,7 @@
     padding-bottom:30%;
     position:relative;
    
-    border-color: gray;
-    border-width: 5px;
-    border-style: double;
+  
 }
 .map-responsive iframe{
     left:0;
@@ -14,14 +12,17 @@
     width:100%;
     position:absolute;
 }
-.titleheading{
+.titleheading {
+    text-align: left;
+    padding-top: 2%;
     height: 100px;
-    padding-top: 5%;
     padding-left: 5%;
+    background-image: url("http://www.smilecure.in/images/bg_pattern_wt_transp2.png");
     font-size: 25px;
     font-weight: bold;
-    background-color: cornflowerblue;
-}
+    color: white;
+    background-color: #225586;
+  }
 
 .grr{
     color: grey;

@@ -1,4 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: "Open Sans", sans-serif }
+body { margin: 0; font-family: 'Open Sans', sans-serif; }
+
+.open-sans{
+    font-family: 'Open Sans', sans-serif;
+}
+.open-sans h1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(29, 77, 133);
+    text-decoration: underline rgb(29, 77, 133);
+}
+.open-sans h3{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(29, 77, 133);
+}
+.open-sans h4{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgb(29, 77, 133);
+}
+.titleheading {
+    text-align: left;
+    padding-top: 2%;
+    height: 100px;
+    padding-left: 5%;
+    background-image: url("http://www.smilecure.in/images/bg_pattern_wt_transp2.png");
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background-color: #225586;
+  }
+

@@ -3,31 +3,17 @@
 
 
 
-<div class="container-float">
-  <div class="largerheadline">
-
-   BOOK APPOINTMENT
-  </div>
-  
-  
-  <div class="breadcrumb smallerheadine" >
-  
-  
-      <ol style="display: flex;">
-        <li><a href="#"><i class="fas fa-home"></i>
-        </a></li>
-        
-        <li>Book Appointment</li>
-      
-      </ol>
-
-  </div>
-
+<div class="titleheading">
+  BOOK APPOINTMENT
 </div>
+  
+  
 
-<div class="row" >
 
-    <div class="col-12 col-sm-12 col-md-6 col-lg-6 " style="background-color: whitesmoke" >
+
+<div class="row"  >
+
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6 " style="background-color: whitesmoke;padding-top: 30px;" >
     
        
          <div class="row" >
@@ -37,7 +23,9 @@
             </div>
            </div>
            <div class="col-lg-12 col-sm-12 col-md-12 col-12 d-flex justify-content-center">
-             <h3>Select Date and Time</h3>
+            <div class="open-sans">
+              <h1> Select Date and Time</h1>
+            </div>
            </div>
          </div>
        
@@ -46,8 +34,10 @@
       <div class="col-lg-6" >
         <div class="row">
           <div class="col-lg-12 col-sm-12 col-md-12 col-12 d-flex justify-content-center"  >
-            <h3> Select Date
-            </h3>
+            <div class="open-sans">
+              <h3> Select Date
+              </h3>
+            </div>
             </div>
             <div class="col-lg-12 col-sm-12 col-md-12 col-12 d-flex justify-content-center"> <ngb-datepicker #dp [(ngModel)]="model" (dateSelect)="onDateSelect($event)" (navigate)="date = $event.next"></ngb-datepicker></div>
       </div>
@@ -57,7 +47,9 @@
       <div class="col-lg-6 " >
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center"  >
+          <div class="open-sans">
             <h3> Choose Time Slot</h3>
+          </div>
           </div>
            
                
@@ -110,32 +102,40 @@
         >
           <h3>{{closedmsg}}</h3>
         </div>
-        <div class="col-lg-12 d-flex justify-content-center">
-          <h2> Time:</h2><h1>{{time}}</h1>         
-         </div>
+      
     
      
-       <div class="col-lg-12 d-flex justify-content-center">
-        Selected Date is
-        <b> {{dateselected === true ? selectedate  : 'Date' }} /        
-         {{dateselected === true ? date.month  : 'Month' }} /     
-         {{dateselected === true ? date.year  : 'Year' }}  </b><b>{{selectedDay}}</b>
-       </div>
+      
           <div class="col-lg-12 d-flex justify-content-center">
-            <button class="btn btn-success"style="float: right;" (click)="checkclosed()" [disabled]="!dateselected" >Check Availability</button>
+            <button class="btn btn-success "style="float: right; " (click)="checkclosed()" [disabled]="!dateselected || !timeselected" >Check Availability</button>
      
           </div>
       
        </div>
       </div>
+     
          <hr/>
-            
+         <div class="col-lg-12 d-flex justify-content-center">
+          <div class="open-sans"><h4>Selected Date is</h4></div>
+        <h3 style="margin-left: 2%;margin-top: -2px;">
+          <b> {{dateselected === true ? selectedate  : 'Date' }} /        
+            {{dateselected === true ? date.month  : 'Month' }} /     
+            {{dateselected === true ? date.year  : 'Year' }}  </b><b>{{selectedDay}}</b>
+        </h3>
+        
+         </div>
+         <div class="col-lg-12 d-flex justify-content-center">
+          <div class="open-sans">
+            <h4> Time:</h4>  
+          </div> 
+          <h3><b>{{time}}</b></h3>      
+         </div>
 </div>
 
+<!-- 2CND PART-->
 
 
-
-    <div class="col-12 col-sm-12 col-md-6 col-lg-6" style="background-color: #e8e8e8"
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6" style="background-color: #e8e8e8;padding-top: 30px;"
     [ngClass]="{'disablediv': !(checkavailablilticlicked==true && closed==false) }">
       <div class="row">
         <div class="col-lg-12 d-flex justify-content-center" >
@@ -144,7 +144,9 @@
            </div>
           </div>
           <div class="col-lg-12 d-flex justify-content-center">
-            <h3>Personal Details</h3>
+           <div class="open-sans">
+             <h1> Personal Details</h1>
+           </div>
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-12 ">
             <div class="container">
@@ -166,12 +168,14 @@
                   required >
                   <span *ngIf="!appointmentform.controls['phno'].valid === true && appointmentform.controls['phno'].touched ===true"><i style="color: red;margin-left: 10%;" class="fa fa-exclamation"></i></span>
                 </div>
-                <div class="col-lg-12 d-flex justify-content-center " style="margin-left:9px">     
+                <div class="col-lg-12 d-flex justify-content-center margintop " style="margin-left:9px">     
             
                   <input class="form-control col-md-12 col-lg-12 col-12 col-xs-12 "   placeholder="Confirm phno *" id="ex5"  [formControl]="appointmentform.controls['confirmphno']" type="text"
                   [ngClass]="{'greenborder' : appointmentform.controls['confirmphno'].valid==true,'redborder': !appointmentform.controls['confirmphno'].valid === true && appointmentform.controls['confirmphno'].touched ===true,'blueborder': appointmentform.controls['confirmphno'].touched === false && !appointmentform.controls['confirmphno'].valid===true}"
                   required autocomplete="off" >
                   <span *ngIf=" !appointmentform.controls['confirmphno'].valid === true && appointmentform.controls['confirmphno'].touched ===true"><i style="color: red;margin-left: 10%;" class="fa fa-exclamation"></i></span>
+               
+               
                 </div>  <div class="alert alert-danger" style="height: 30px;" *ngIf="appointmentform.controls['confirmphno'].valid==false && appointmentform.controls['confirmphno'].touched==true">
                   Phone number doesn't match
                 </div>
