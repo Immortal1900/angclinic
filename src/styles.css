@@ -13,6 +13,13 @@ body { margin: 0; font-family: 'Open Sans', sans-serif; }
     color: rgb(29, 77, 133);
     text-decoration: underline rgb(29, 77, 133);
 }
+.open-sans h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(29, 77, 133);
+  
+}
 .open-sans h3{
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;

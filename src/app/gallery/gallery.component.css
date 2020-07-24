@@ -1,100 +1,102 @@
 .imagecontain {
+  object-fit: fill;
+  height: 250px;
+  width: 400px;
+}
+.Row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.column {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media only screen and (max-width: 540px) {
+  .imagecontain {
     object-fit: fill;
-    height: 200px;
-    width: 400px;
+    height: 100px;
+    width: 200px;
   }
-  .Row {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .column {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  @media only screen and (max-width: 540px) {
-    .imagecontain {
-      object-fit: fill;
-      height: 100px;
-      width: 200px;
-    }
-  }
-  .fixeddiv{
-    width: 100%;
-    height: 70%;
+}
+.fixeddiv {
+  width: 100%;
+  height: 70%;
+}
+.slideimg {
+  object-fit: fill;
+  height: 600px;
+  width: 100%;
+}
+.top-left {
+  position: absolute;
+  top: 20px;
+  left: 200px;
+}
+.firstline h5 {
+  margin-top: 40px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #055685;
+}
+.firstline h1 {
+  margin-top: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  color: #055685;
+}
+
+.firstline h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  color: #055685;
+}
+
+.firstline p {
+  margin-top: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #055685;
+}
+.button {
+  background-color: #24d38a;
+  border: none;
+  color: white;
+
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+
+.button1 {
+  border-radius: 20px;
+}
+@media only screen and (max-width: 540px) {
+  .sliderText {
+    display: none;
   }
   .slideimg {
-   
-    object-fit:fill;
-    height: 100%;
     width: 100%;
+    height: 250px;
   }
-  .top-left {
-    position: absolute;
-    top: 20px;
-    left: 200px;
+  .headericon {
+    margin-left: 0px;
+    height: 50px;
+    width: 200px;
   }
-  .firstline h5 {
-    margin-top: 40px;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    color: #055685;
-  }
-  .firstline h1 {
-    margin-top: 20px;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 700;
-    font-size: 38px;
-    color: #055685;
-  }
-  
-  .firstline h4 {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-    font-size: 25px;
-    color: #055685;
-  }
-  
-  .firstline p {
-    margin-top: 20px;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    color: #055685;
-  }
-  .button {
-    background-color: #24d38a;
-    border: none;
-    color: white;
-  
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 600;
-    font-family: "Open Sans", sans-serif;
-  }
-  
-  .button1 {
-    border-radius: 20px;
-  }
-  @media only screen and (max-width: 540px) {
-    .sliderText {
-      display: none;
-    }
-    .slideimg {
-      width: 100%;
-      height: 150px;
-    }
-    .headericon {
-      margin-left: 0px;
-      height: 50px;
-      width: 200px;
-    }
-  }
-  
+}
+.containe-fluid {
+  padding-left: 5%;
+  padding-right: 5%;
+}

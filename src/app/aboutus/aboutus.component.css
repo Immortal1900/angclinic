@@ -1,68 +1,70 @@
 @media only screen and (max-width: 540px) {
-    .aboutimg {
-      height: 100px;
-      width: 120px;
-    }
-    .aboutcontainer {
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-    .myp {
-      text-align: center;
-      font-family: "Open Sans", sans-serif;
-      font-weight: 600;
-      color: #ff6210;
-    }
+  .aboutimg {
+    height: 100px;
+    width: 120px;
+  }
+  .container-fluid {
+    padding-left: 3% !important;
+    padding-right: 3% !important;
+  }
+  .aboutcontainer {
+    margin-left: 10px;
+    margin-right: 20px;
   }
   .myp {
+    text-align: center;
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     color: #ff6210;
-    font-size: 25px;
-    padding-bottom: 20px;
   }
-  
-  .aboutusp {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-  }
-  .largerheadline{
-  
-    font-family: times, 'Times New Roman', 'times-roman', georgia, serif;
-    color: white;
-    margin: 0;
-    padding-top: 40px;
-    padding-left: 80px;
-    font-size: 30px;
-    line-height: 44px;
-    letter-spacing: 0px;
-    font-weight: bold;
-    background-color: rgb(78, 182, 78);
-  }
-  .smallerheadine{
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-size:15px;
-    font-weight: normal;
-    width: 100%;
-    height: 35px;
-    margin-left: 0;
-    margin-bottom: 0; 
-     border-bottom: rgb(44, 22, 22) 1px solid;
-  }
-  
-  
-  
-   li{
-    list-style: url("../../assets/chevron-right-solid.svg");
-    margin-left: 20px;
-  }
-  .smallerheadine a :hover{
+}
+.myp {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: #ff6210;
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.aboutusp {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+.container-fluid {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.largerheadline {
+  font-family: times, "Times New Roman", "times-roman", georgia, serif;
+  color: white;
+  margin: 0;
+  padding-top: 40px;
+  padding-left: 80px;
+  font-size: 30px;
+  line-height: 44px;
+  letter-spacing: 0px;
+  font-weight: bold;
+  background-color: rgb(78, 182, 78);
+}
+.smallerheadine {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+  font-weight: normal;
+  width: 100%;
+  height: 35px;
+  margin-left: 0;
+  margin-bottom: 0;
+  border-bottom: rgb(44, 22, 22) 1px solid;
+}
+
+li {
+  list-style: url("../../assets/chevron-right-solid.svg");
+  margin-left: 20px;
+}
+.smallerheadine a :hover {
   color: green;
-  
-  }
-  .smallerheadine a{
-    color: rgb(29, 29, 29);
-    
-    }
-  
+}
+.smallerheadine a {
+  color: rgb(29, 29, 29);
+}
