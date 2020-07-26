@@ -21,17 +21,31 @@ select.custom-select {
   }
   .greenborder{
     border: green 2px solid;
-    border-radius: 50px;
+  
 }
 .redborder{
     border: red 2px solid;
-    border-radius: 50px;
+  
 }
 .blueborder{
     border: rgb(53, 114, 184) 2px ;
     border-style: solid;
-    border-radius: 50px;
+
     
+}
+.greendateborder{
+  border: green 2px solid;
+ 
+}
+.reddateborder{
+  border: red 2px solid;
+
+}
+.bluedateborder{
+  border: rgb(53, 114, 184) 2px ;
+  border-style: solid;
+
+  
 }
 .disablediv
 {
@@ -98,3 +112,17 @@ color: green;
   color: rgb(29, 29, 29);
   
   }
+
+  .backgroundblue{
+	overflow: hidden;
+	width: 100%;
+	min-width: 100%;
+	background-color: rgba(0,147,173,0.7);
+  }
+.bg{
+  width: 100%;
+
+
+  background-repeat: no-repeat;
+	background-image:url(../../assets/background.jpg);
+}

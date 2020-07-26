@@ -3,7 +3,7 @@
     height: 100px;
     width: 120px;
   }
-  .container-fluid {
+  .c1 {
     padding-left: 3% !important;
     padding-right: 3% !important;
   }
@@ -16,6 +16,18 @@
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     color: #ff6210;
+  }
+  .map-responsive {
+    overflow: hidden;
+    padding-bottom: 30%;
+    position: relative;
+  }
+  .map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
   }
 }
 .myp {
@@ -31,7 +43,7 @@
   font-weight: 500;
   font-size: 15px;
 }
-.container-fluid {
+.c1 {
   padding-left: 20%;
   padding-right: 20%;
 }
