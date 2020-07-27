@@ -126,3 +126,7 @@ color: green;
   background-repeat: no-repeat;
 	background-image:url(../../assets/background.jpg);
 }
+.alertdanger{
+  background-color: rgb(216, 157, 157);
+  color: rgb(145, 42, 42);
+}

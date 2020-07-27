@@ -26,7 +26,7 @@ export class GalleryComponent implements OnInit {
   links:  Array<any> = [];
   linkobjectsize;
   async getgallarylinks(){
-  await firebase.firestore().collection("gallary").doc("thumbnail").get().then((document)=>{
+  await firebase.firestore().collection("gallary").doc("gallary").get().then((document)=>{
     this.linkobject=document.data();
     this.linkobjectsize=document.data().gsize;
     console.log(this.linkobject);

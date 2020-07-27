@@ -27,7 +27,7 @@
   height: 70%;
 }
 .slideimg {
-  object-fit: fill;
+  object-fit: cover;
   height: 600px;
   width: 100%;
 }

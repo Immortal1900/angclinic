@@ -110,6 +110,7 @@
 <div class="containe-fluid">
   <div class="row Row">
     <div class="col-lg-3 col-sm-6 col-6 column" *ngFor="let link of links">
+     <a href="{{link}}">
       <div>
         <img
           src="{{link}}"
@@ -117,6 +118,7 @@
           class="img-thumbnail imagecontain"
         />
       </div>
+     </a>
     </div>
   </div>
 </div>

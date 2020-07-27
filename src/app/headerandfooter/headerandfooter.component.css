@@ -1,39 +1,37 @@
-.bottom1{ 
-    font-size: small;
-    
-    color: whitesmoke;
-    }
-    .bottom1 a{
-        color: #5aa8ab;
-    }
-    .bottom1 h4{
-        color: #5aa8ab;
-        font-weight: 200;
-        text-align: left;
-    }
-    .bottom1 h2{
-        color: whitesmoke;   
-        font-weight: 100;
-        font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    }
-    .bottom1 h3{
+.bottom1 {
+  font-size: small;
 
-        font-weight: 300;
-     
-    }
+  color: whitesmoke;
+}
+.bottom1 a {
+  color: #5aa8ab;
+}
+.bottom1 h4 {
+  color: #5aa8ab;
+  font-weight: 200;
+  text-align: left;
+}
+.bottom1 h2 {
+  color: whitesmoke;
+  font-weight: 100;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+.bottom1 h3 {
+  font-weight: 300;
+}
 
-    .topbarbutton:hover{
+.topbarbutton{
       
-    border-bottom: 5px green solid; 
-       
-    }
+        
+    font-size: 17px;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    } 
+.topbarbutton:hover {
+  border-bottom: 5px green solid;
+}
 
-  
-
-.topbar1{
-    
-        width: 100%;height: 100%;
-        background-color: whitesmoke;
-     
-    
+.topbar1 {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
 }
