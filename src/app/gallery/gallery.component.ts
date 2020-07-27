@@ -14,11 +14,11 @@ export class GalleryComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("Fetching links");
+   
     
     this.getgallarylinks();
 
-    console.log("Done");
+ 
   }
 
 
@@ -42,9 +42,9 @@ export class GalleryComponent implements OnInit {
    if(v!=null){
     this.links.push(v);
    }
-    console.log(v);
     
-    console.log(this.links);
+    
+   
   }
 }
 
