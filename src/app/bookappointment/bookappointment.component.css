@@ -1,24 +1,4 @@
-select.custom-select {
-    margin: 0.5rem 0.5rem 0 0;
-    width: auto;
-  }
-  .circle{
-    background: lightblue;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(75, 196, 75);
 
-  }
-  .center{
-   display: flex;
-   justify-content: center;
-   background-color: lightblue;
-   
-  }
   .greenborder{
     border: green 2px solid;
   
@@ -47,14 +27,7 @@ select.custom-select {
 
   
 }
-.disablediv
-{
-  pointer-events: none;
 
-  /* for "disabled" effect */
-  opacity: 0.5;
-  background: #CCC;
-}
 .margintop{
   margin-top: 5%;
 }
@@ -72,58 +45,18 @@ select.custom-select {
   padding: 0 !important;
   margin: 0 !important;
 }
-.largerheadline{
-  
-  font-family: times, 'Times New Roman', 'times-roman', georgia, serif;
-  color: white;
-  margin: 0;
-  padding-top: 40px;
-  padding-left: 80px;
-  font-size: 30px;
-  line-height: 44px;
-  letter-spacing: 0px;
-  font-weight: bold;
-  background-color: #2baaa1;
-}
-.smallerheadine{
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size:15px;
-  font-weight: normal;
-  width: 100%;
-  height: 35px;
-  margin-left: 0;
-  margin-bottom: 0; 
-  
-
-  border-bottom: rgb(44, 22, 22) 1px solid;
-}
-
-
-
- li{
-  list-style: url("../../assets/chevron-right-solid.svg");
-  margin-left: 20px;
-}
-.smallerheadine a :hover{
-color: green;
-
-}
-.smallerheadine a{
-  color: rgb(29, 29, 29);
-  
-  }
-
-  .backgroundblue{
-	overflow: hidden;
+.backgroundblue{
 	width: 100%;
-	min-width: 100%;
-	background-color: rgba(0,147,173,0.7);
+  background-color: rgba(0,147,173,0.7);
+  margin-right: 0px;
+  margin-left: 0px;
+
   }
 .bg{
+  overflow: hidden;
   width: 100%;
-
-
-  background-repeat: no-repeat;
+  margin-right: 0px;
+  margin-left: 0px;
 	background-image:url(../../assets/background.jpg);
 }
 .alertdanger{

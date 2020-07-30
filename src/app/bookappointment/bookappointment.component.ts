@@ -41,9 +41,10 @@ export class BookappointmentComponent implements OnInit {
 
   
 
-
+  today: number = Date.now();
 
   constructor(private calendar: NgbCalendar,public fb: FormBuilder) {
+    setInterval(() => {this.today = Date.now()}, 1);
     this.appointmentform = this.fb.group({
       name: ['', [Validators.required]], 
       email: ['',[Validators.pattern(this.emailPattern)]],
@@ -92,6 +93,7 @@ export class BookappointmentComponent implements OnInit {
 
     }
   }
+ 
   closedday;i;
   closeddate;
   closeddatesize;
@@ -157,18 +159,12 @@ else{
     console.log(this.selectedDay);
     console.log('Form Submitted');
     this.selecteddatestring=this.model.day+"/"+this.model.month+"/"+this.model.year;
-    let email: string = appointmentform.value.email;
-    let name: string = appointmentform.value.name;
-    let phno: string = appointmentform.value.phno;
-  
-    console.log(email,name,phno,this.selecteddatestring);
-    
-  
     firebase.firestore().collection("bookappointment").doc().set({
       name:appointmentform.value.name,
       phno:appointmentform.value.phno,
       email:appointmentform.value.email,
       appointmentdate:this.selecteddatestring,
+      booktimestamp:this.today
     
     }).then(()=>{
       

@@ -7,28 +7,28 @@
   BOOK APPOINTMENT
 </div>
   
-  
-
 
 <div class="bg" >
 
-<div class="row backgroundblue">
+<div class="backgroundblue">
+ <div class="row">
   <div class="col-lg-7 col-md-7 col-sm-12 col-12" >
-    <div  style="text-align: center;padding-top: 10%;">
-      <h1>Book You Slot Now and Save your time</h1>
+    <div  style="text-align: center;margin-top: 10%;">
+      <h1>Book Your Slot Now and Save your time</h1>
       <p>Simple And Easy Appointments </p>
       <h2>For Help Call : +189-123-453</h2>
    
     </div>
   </div>
-  <div class="col-lg-5 col-md-5 col-sm-12 col-12">
-    <div class="col-lg-7" style="background-color: white;margin-top: 4%;margin-bottom:4%;text-align: center;">
+  <div class="col-lg-5 col-md-5 col-sm-12 col-12" >
+  <div class="row">
+    <div class="col-lg-7" style="background-color: white;text-align: center;margin-top: 4%;margin-bottom: 8%;">
       <div class="col-lg-12 open-sans">
         <h1>Book Appointment</h1>
       </div>
       <hr>
       <form [formGroup]="appointmentform" (ngSubmit)="onSubmit(appointmentform)" >
-        <div class="col-lg-12 d-flex justify-content-center margintop">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center margintop">
           
       
           <input class="form-control" placeholder="Name *" id="ex1"  [formControl]="appointmentform.controls['name']" type="text"
@@ -38,14 +38,14 @@
        
         </div>
      
-        <div class="col-lg-12 d-flex justify-content-center margintop">     
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center margintop">     
      
           <input class="form-control " placeholder="Phno *" id="ex2"  [formControl]="appointmentform.controls['phno']" type="text"
           [ngClass]="{'greenborder' : appointmentform.controls['phno'].valid==true,'redborder': !appointmentform.controls['phno'].valid === true && appointmentform.controls['phno'].touched ===true,'blueborder': appointmentform.controls['phno'].touched === false && !appointmentform.controls['phno'].valid===true}"
           required >
           <span *ngIf="!appointmentform.controls['phno'].valid === true && appointmentform.controls['phno'].touched ===true"><i style="color: red;margin-left: 10%;" class="fa fa-exclamation"></i></span>
         </div>
-        <div class="col-lg-12 d-flex justify-content-center margintop " >     
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center margintop" >     
     
           <input class="form-control"   placeholder="Confirm phno *" id="ex5" autocomplete="off" [formControl]="appointmentform.controls['confirmphno']" type="text"
           [ngClass]="{'greenborder' : appointmentform.controls['confirmphno'].valid==true,'redborder': !appointmentform.controls['confirmphno'].valid === true && appointmentform.controls['confirmphno'].touched ===true,'blueborder': appointmentform.controls['confirmphno'].touched === false && !appointmentform.controls['confirmphno'].valid===true}"
@@ -53,17 +53,18 @@
           <span *ngIf=" !appointmentform.controls['confirmphno'].valid === true && appointmentform.controls['confirmphno'].touched ===true"><i style="color: red;margin-left: 10%;" class="fa fa-exclamation"></i></span>
        
        
-        </div>  <div class="alert alert-danger" style="height: 30px;" *ngIf="appointmentform.controls['confirmphno'].valid==false && appointmentform.controls['confirmphno'].touched==true">
+        </div>  
+        <div class="alertdanger" style="height: 30px;" *ngIf="appointmentform.controls['confirmphno'].valid==false && appointmentform.controls['confirmphno'].touched==true">
           Phone number doesn't match
         </div>
        
      
        
-        <div class="col-lg-12 d-flex justify-content-center margintop">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center margintop">
        
           <input class="form-control" placeholder="Email" id="ex3"
           [formControl]="appointmentform.controls['email']"
-          
+       
           [ngClass]="{'greenborder' : appointmentform.controls['email'].valid==true,'blueborder': appointmentform.controls['email'].touched === false && !appointmentform.controls['email'].valid===true  ||  checkifemailempty(appointmentform )===true,
           'redborder' : appointmentform.controls['email'].invalid==true &&  appointmentform.controls['email'].touched==true
         }"
@@ -72,37 +73,36 @@
           <span *ngIf=" appointmentform.controls['email'].invalid==true &&  appointmentform.controls['email'].touched==true && checkifemailempty(appointmentform)==false"><i style="color: red;margin-left: 10%;" class="fa fa-exclamation"></i></span>
         
      </div>
-     <hr>
-     <div class="open-sans">
-       <h2>Select Date</h2>
-   
-     </div>
-     <div class="col-lg-12 d-flex justify-content-center margintop">
      
-            <input  placeholder="yyyy-mm-dd"  [formControl]="appointmentform.controls['dates']"
+     <hr>
+     <div class="open-sans" >
+       <h2>Select Date</h2>
+     </div>
+     <div class="col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center margintop">
+     
+            <input class="form-control" placeholder="yyyy-mm-dd"  [formControl]="appointmentform.controls['dates']"
                    name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker"
                     style="height: 40px;"
                    [ngClass]="{'redborder': model==null && appointmentform.controls['dates'].touched == true ,'greenborder':!(model==null),'blueborder':model==null && appointmentform.controls['dates'].touched==false }"      
             >
-            <button class="blueborder" type="button" (click)="d.toggle()"><i class="far fa-calendar-alt"></i></button>
- </div>
- <div class="col-lg-12" style="text-align: center;"
+            <button class="blueborder"  type="button" (click)="d.toggle()"><i class="far fa-calendar-alt"></i></button>
+      
+          </div>
+ <div class="col-lg-12 col-md-12 col-sm-12 col-12" style="text-align:center;" *ngIf=""
  [ngClass]="{'displaynone':model==null,'alertdanger':closed==true && checkavailablilticlicked==true}"      
  >
    <h3>{{closedmsg}}</h3>
  </div>
 
-    <div class="col-lg-12 d-flex justify-content-center">
-      <button class="btn btn-success" style="margin-bottom: 4%;" 
+    <div class="col-lg-12 col-12 d-flex justify-content-center" style="margin-top: 5%;">
+      <button class="btn btn-success" style="margin-bottom: 50px;" 
           [disabled]="appointmentform.controls['name'].invalid==true || appointmentform.controls['confirmphno'].invalid==true ||model==null "
       type="submit">Book Appointment </button>
     </div>
-  
-
-
+ 
       <div class="toast" role="alert" data-delay="10000" data-autohide="false"
-      style="top: 50%;left: 30%;position:fixed;
-      width: 70%;"
+      style="top: 50%;left: 30%;position: absolute;
+      width: 70%;z-index: 9999;"
       >
         <div class="toast-header">
        
@@ -112,12 +112,11 @@
         </div>
         <div  class="toast-body" style="background-color: #5cb85c;">Your Appointment has been booked Successfully</div>
       </div>
-
-
-
     </form>
     </div>
   </div>
+  </div>
+ </div>
 </div>
 </div>
 
